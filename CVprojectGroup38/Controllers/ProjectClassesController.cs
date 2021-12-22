@@ -11,125 +11,114 @@ using CVprojectGroup38.Models;
 
 namespace CVprojectGroup38.Controllers
 {
-    public class UserClassesController : Controller
+    public class ProjectClassesController : Controller
     {
         private Data.ApplicationDbContext db = new Data.ApplicationDbContext();
 
-        // GET: UserClasses
+        // GET: ProjectClasses
         public ActionResult Index()
         {
-            return View(db.UserClasses.ToList());
+            return View(db.ProjectClasses.ToList());
         }
 
-        //test edvin
         public ActionResult Index1()
         {
+            var projectList = db.ProjectClasses.ToList();
 
-            var userList = db.UserClasses.ToList();
-
-            return View(userList);
+            return View(projectList);
         }
 
-
-        //Test edvin
-        public ActionResult Details1(int id)
-        {
-            var user = db.UserClasses.Single(usr => usr.Id == id);
-
-            return View(user);
-        }
-
-        // GET: UserClasses/Details/5
+        // GET: ProjectClasses/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserClass userClass = db.UserClasses.Find(id);
-            if (userClass == null)
+            ProjectClass projectClass = db.ProjectClasses.Find(id);
+            if (projectClass == null)
             {
                 return HttpNotFound();
             }
-            return View(userClass);
+            return View(projectClass);
         }
 
-        // GET: UserClasses/Create
+        // GET: ProjectClasses/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: UserClasses/Create
+        // POST: ProjectClasses/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,UserName,UserPassword")] UserClass userClass)
+        public ActionResult Create([Bind(Include = "Id,Projectname")] ProjectClass projectClass)
         {
             if (ModelState.IsValid)
             {
-                db.UserClasses.Add(userClass);
+                db.ProjectClasses.Add(projectClass);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(userClass);
+            return View(projectClass);
         }
 
-        // GET: UserClasses/Edit/5
+        // GET: ProjectClasses/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserClass userClass = db.UserClasses.Find(id);
-            if (userClass == null)
+            ProjectClass projectClass = db.ProjectClasses.Find(id);
+            if (projectClass == null)
             {
                 return HttpNotFound();
             }
-            return View(userClass);
+            return View(projectClass);
         }
 
-        // POST: UserClasses/Edit/5
+        // POST: ProjectClasses/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,UserName,UserPassword")] UserClass userClass)
+        public ActionResult Edit([Bind(Include = "Id,Projectname")] ProjectClass projectClass)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(userClass).State = EntityState.Modified;
+                db.Entry(projectClass).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(userClass);
+            return View(projectClass);
         }
 
-        // GET: UserClasses/Delete/5
+        // GET: ProjectClasses/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserClass userClass = db.UserClasses.Find(id);
-            if (userClass == null)
+            ProjectClass projectClass = db.ProjectClasses.Find(id);
+            if (projectClass == null)
             {
                 return HttpNotFound();
             }
-            return View(userClass);
+            return View(projectClass);
         }
 
-        // POST: UserClasses/Delete/5
+        // POST: ProjectClasses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            UserClass userClass = db.UserClasses.Find(id);
-            db.UserClasses.Remove(userClass);
+            ProjectClass projectClass = db.ProjectClasses.Find(id);
+            db.ProjectClasses.Remove(projectClass);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

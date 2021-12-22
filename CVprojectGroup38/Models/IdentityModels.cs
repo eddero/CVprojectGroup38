@@ -26,6 +26,7 @@ namespace CVprojectGroup38.Models
         }
 
         public DbSet<UserClass> userClasses { get; set; }
+        public DbSet<ProjectClass> projectClasses { get; set; }
 
         public static ApplicationDbContext Create()
         {

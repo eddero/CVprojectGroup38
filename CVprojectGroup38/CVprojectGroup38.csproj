@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProjectClassesController.cs" />
     <Compile Include="Controllers\UserClassesController.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -187,6 +188,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ProjectClass.cs" />
     <Compile Include="Models\UserClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -252,6 +254,14 @@
     <Content Include="Views\UserClasses\Details.cshtml" />
     <Content Include="Views\UserClasses\Edit.cshtml" />
     <Content Include="Views\UserClasses\Index.cshtml" />
+    <Content Include="Views\UserClasses\Details1.cshtml" />
+    <Content Include="Views\UserClasses\Index1.cshtml" />
+    <Content Include="Views\ProjectClasses\Create.cshtml" />
+    <Content Include="Views\ProjectClasses\Delete.cshtml" />
+    <Content Include="Views\ProjectClasses\Details.cshtml" />
+    <Content Include="Views\ProjectClasses\Edit.cshtml" />
+    <Content Include="Views\ProjectClasses\Index.cshtml" />
+    <Content Include="Views\ProjectClasses\Index1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

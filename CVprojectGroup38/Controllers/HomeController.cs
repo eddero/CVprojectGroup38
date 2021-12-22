@@ -8,8 +8,18 @@ namespace CVprojectGroup38.Controllers
 {
     public class HomeController : Controller
     {
+        /*public ActionResult Index()
+        {
+            return View();
+        }*/
+
         public ActionResult Index()
         {
+            ViewBag.Countries = new List<string>()
+            {
+                "india","us","Uk","sweden"
+            };
+
             return View();
         }
 

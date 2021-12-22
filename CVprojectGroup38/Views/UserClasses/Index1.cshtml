@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CVprojectGroup38.Models.UserClass>
+
+@using CVprojectGroup38.Models;
+@{
+    ViewBag.Title = "User List";
+}
+
+<div style="font-family:Arial">
+
+    <h2>User List</h2>
+    <ul>
+        @foreach (var user in @Model)
+        {
+            <li>
+                @Html.ActionLink(user.UserName, "Details1", new { id = user.Id });
+            </li>
+        }
+    </ul>
+</div>
+
+
