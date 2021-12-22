@@ -196,6 +196,10 @@
     <Compile Include="Migrations\202112221506074_addlist.Designer.cs">
       <DependentUpon>202112221506074_addlist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112221523443_workontest.cs" />
+    <Compile Include="Migrations\202112221523443_workontest.Designer.cs">
+      <DependentUpon>202112221523443_workontest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -306,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112221506074_addlist.resx">
       <DependentUpon>202112221506074_addlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112221523443_workontest.resx">
+      <DependentUpon>202112221523443_workontest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

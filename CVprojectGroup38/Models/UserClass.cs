@@ -12,6 +12,7 @@ namespace CVprojectGroup38.Models
         public int Id { get; set; }
         public string UserName { get; set; }
         public string UserPassword { get; set; }
+        public int WorkOnProject { get; set; }
         public List<ProjectClass> workOnProjects { get; set; }
 
     }

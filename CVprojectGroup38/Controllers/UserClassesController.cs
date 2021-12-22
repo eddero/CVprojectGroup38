@@ -25,7 +25,7 @@ namespace CVprojectGroup38.Controllers
         public ActionResult Index1(int projectId)
         {
             
-            var userList = db.UserClasses.Where(proj => proj.Id == projectId).ToList();
+            var userList = db.UserClasses.Where(proj => proj.WorkOnProject == projectId).ToList();
 
             return View(userList);
         }
