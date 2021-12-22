@@ -188,6 +188,14 @@
     <Compile Include="Migrations\202112221244113_projecttodb.Designer.cs">
       <DependentUpon>202112221244113_projecttodb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112221420297_test1.cs" />
+    <Compile Include="Migrations\202112221420297_test1.Designer.cs">
+      <DependentUpon>202112221420297_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112221506074_addlist.cs" />
+    <Compile Include="Migrations\202112221506074_addlist.Designer.cs">
+      <DependentUpon>202112221506074_addlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -292,6 +300,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112221244113_projecttodb.resx">
       <DependentUpon>202112221244113_projecttodb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112221420297_test1.resx">
+      <DependentUpon>202112221420297_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112221506074_addlist.resx">
+      <DependentUpon>202112221506074_addlist.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

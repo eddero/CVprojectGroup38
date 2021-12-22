@@ -15,7 +15,7 @@ namespace CVprojectGroup38.Data
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public ApplicationDbContext() : base("name=ApplicationDbContext")
+        public ApplicationDbContext() : base("name=DefaultConnection")
         {
         }
 

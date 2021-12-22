@@ -12,7 +12,7 @@
             @foreach (var project in @Model)
             {
                 <li>
-                    @Html.ActionLink(project.Projectname, "Index1", "UserClass", new { projectid = project.Id }, null);
+                    @Html.ActionLink(project.Projectname, "Index1", "UserClasses", new { projectId = project.Id }, null);
                 </li>
             }
         </ul>
