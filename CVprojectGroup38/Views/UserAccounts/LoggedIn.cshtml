@@ -1,0 +1,12 @@
+﻿@model CVprojectGroup38.Models.UserAccount
+
+@{
+    ViewBag.Title = "LoggedIn";
+}
+
+@if (Session["Id"] != null)
+{
+<h1>Hello there </h1>
+    <h4> @Session["UserName"].ToString()</h4>
+}
+

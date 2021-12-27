@@ -22,5 +22,9 @@ namespace CVprojectGroup38.Data
         public System.Data.Entity.DbSet<CVprojectGroup38.Models.UserClass> UserClasses { get; set; }
 
         public System.Data.Entity.DbSet<CVprojectGroup38.Models.ProjectClass> ProjectClasses { get; set; }
+
+        public System.Data.Entity.DbSet<CVprojectGroup38.Models.UserAccount> UserAccounts { get; set; }
+
+        public System.Data.Entity.DbSet<CVprojectGroup38.Models.UserInfo> UserInfoes { get; set; }
     }
 }

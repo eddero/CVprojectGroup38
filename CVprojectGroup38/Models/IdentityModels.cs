@@ -24,6 +24,8 @@ namespace CVprojectGroup38.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<UserAccount> userAccounts { get; set; }
+        public DbSet<UserInfo> userInfos { get; set; }
 
         public DbSet<UserClass> userClasses { get; set; }
         public DbSet<ProjectClass> projectClasses { get; set; }

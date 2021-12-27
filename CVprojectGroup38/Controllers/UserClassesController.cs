@@ -15,11 +15,8 @@ namespace CVprojectGroup38.Controllers
     {
         private Data.ApplicationDbContext db = new Data.ApplicationDbContext();
 
-        // GET: UserClasses
-        public ActionResult Index()
-        {
-            return View(db.UserClasses.ToList());
-        }
+       
+        #region Edvin codes
 
         //test edvin
         public ActionResult Index1(int projectId)
@@ -39,6 +36,15 @@ namespace CVprojectGroup38.Controllers
             return View(user);
         }
 
+        #endregion
+
+        // GET: UserClasses
+        public ActionResult Index()
+        {
+            return View(db.UserClasses.ToList());
+        }
+
+
         // GET: UserClasses/Details/5
         public ActionResult Details(int? id)
         {
@@ -54,6 +60,7 @@ namespace CVprojectGroup38.Controllers
             return View(userClass);
         }
 
+
         // GET: UserClasses/Create
         public ActionResult Create()
         {
@@ -65,16 +72,18 @@ namespace CVprojectGroup38.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,UserName,UserPassword")] UserClass userClass)
+        public ActionResult Create([Bind(Include = "Id,UserName,UserPassword,WorkOnProject")] UserClass userClass)
         {
             if (ModelState.IsValid)
             {
+                
                 db.UserClasses.Add(userClass);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             return View(userClass);
+
         }
 
         // GET: UserClasses/Edit/5
